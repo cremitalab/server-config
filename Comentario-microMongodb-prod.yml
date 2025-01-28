@@ -1,0 +1,23 @@
+# Configuración para el perfil de desarrollo (dev)
+Comentario:
+  property: Comentario Profile Prod  # Propiedad personalizada para el perfil prod
+
+server:
+  port: 8081  # Puerto para el entorno de producción
+
+spring:
+  application:
+    name: api-rest-mongo  # Nombre del servicio para producción
+  data:
+    mongodb:
+      uri: mongodb://prod-mongo-host:27017/prod_db  # Base de datos de producción en un servidor MongoDB remoto
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka  # Asegúrate de que este sea el URL correcto de tu Eureka Server en producción
+  instance:
+    prefer-ip-address: true
+    metadata-map:
+      port: ${server.port}  # El puerto asignado dinámicamente
+    instance-id: ${spring.application.name}:${server.port}:${random.value}  # ID de la instancia

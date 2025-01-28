@@ -1,0 +1,22 @@
+Comentario:
+  property: Comentario Profile Dev  # Propiedad personalizada para el perfil dev
+
+server:
+  port: 8080  # O el puerto que prefieras para el entorno de desarrollo
+
+spring:
+  application:
+    name: api-rest-mongo  # Nombre del servicio para desarrollo
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/dev_db  # Base de datos de desarrollo (MongoDB)
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka  # URL de Eureka Server
+  instance:
+    prefer-ip-address: true  # Preferir dirección IP en lugar de hostname
+    metadata-map:
+      port: ${server.port}  # El puerto asignado dinámicamente
+    instance-id: ${spring.application.name}:${server.port}:${random.value}  # ID de la instancia

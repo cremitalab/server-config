@@ -1,0 +1,28 @@
+# Configuración para el perfil de desarrollo (dev)
+Producto:
+  property: Producto profile Dev  # Propiedad personalizada para el perfil dev
+
+server:
+  port: 8082  # Puerto asignado para el entorno de desarrollo
+
+spring:
+  application:
+    name: api-rest-mysql  # Nombre del servicio para desarrollo
+  datasource:
+    url: jdbc:mysql://localhost:3307/MicroMysql-deb  # Base de datos de desarrollo (MySQL)
+    username: root
+    password: universo903
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka  # URL de Eureka Server
+  instance:
+    prefer-ip-address: true  # Preferir dirección IP en lugar de hostname
+    metadata-map:
+      port: ${server.port}  # El puerto asignado dinámicamente
+    instance-id: ${spring.application.name}:${server.port}:${random.value}  # ID de la instancia

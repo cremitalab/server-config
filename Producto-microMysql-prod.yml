@@ -1,0 +1,28 @@
+# Configuración para el perfil de producción (prod)
+Producto:
+  property: Producto profile Prod  # Propiedad personalizada para el perfil prod
+
+server:
+  port: 8083  # Puerto asignado para el entorno de producción
+
+spring:
+  application:
+    name: api-rest-mysql  # Nombre del servicio para producción
+  datasource:
+    url: jdbc:mysql://localhost:3307/MicroMysql-prod  # Base de datos de producción (MySQL)
+    username: root
+    password: universo903  # Considera cambiar la contraseña en producción
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka  # URL de Eureka Server
+  instance:
+    prefer-ip-address: true  # Preferir dirección IP en lugar de hostname
+    metadata-map:
+      port: ${server.port}  # El puerto asignado dinámicamente
+    instance-id: ${spring.application.name}:${server.port}:${random.value}  # ID de la instancia
