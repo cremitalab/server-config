@@ -22,3 +22,6 @@ eureka:
     metadata-map:
       port: ${server.port}  # El puerto asignado dinámicamente
     instance-id: ${spring.application.name}:${server.port}:${random.value}  # ID de la instancia
+app:
+
+  test-prop: "Segundo valor que se envia desde Config Server"
