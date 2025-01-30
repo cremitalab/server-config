@@ -21,8 +21,4 @@ eureka:
       port: ${server.port}  # El puerto asignado dinámicamente
     instance-id: ${spring.application.name}:${server.port}:${random.value}  # ID de la instancia
 	
-	
-	
-	
-	
 
