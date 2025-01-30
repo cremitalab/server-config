@@ -1,8 +1,6 @@
 Comentario:
   property: Comentario Profile Dev  # Propiedad personalizada para el perfil dev
-
-server:
-  port: 8080  # O el puerto que prefieras para el entorno de desarrollo
+  # O el puerto que prefieras para el entorno de desarrollo
 
 spring:
   application:

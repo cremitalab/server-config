@@ -2,8 +2,7 @@
 Comentario:
   property: Comentario Profile Prod  # Propiedad personalizada para el perfil prod
 
-server:
-  port: 8081  # Puerto para el entorno de producción
+# Puerto para el entorno de producción
 
 spring:
   application:

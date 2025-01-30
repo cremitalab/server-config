@@ -2,8 +2,7 @@
 Producto:
   property: Producto profile Prod  # Propiedad personalizada para el perfil prod
 
-server:
-  port: 8083  # Puerto asignado para el entorno de producción
+  # Puerto asignado para el entorno de producción
 
 spring:
   application:

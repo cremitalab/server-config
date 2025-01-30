@@ -1,9 +1,7 @@
 # Configuración para el perfil de desarrollo (dev)
 Producto:
   property: Producto profile Dev  # Propiedad personalizada para el perfil dev
-
-server:
-  port: 8082  # Puerto asignado para el entorno de desarrollo
+  # Puerto asignado para el entorno de desarrollo
 
 spring:
   application:
