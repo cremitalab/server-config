@@ -12,6 +12,9 @@ spring:
     url: jdbc:mysql://localhost:3307/MicroMysql  # Base de datos de desarrollo (MySQL)
     username: root
     password: universo903
+    driver-class-name: com.mysql.cj.jdbc.Driver  # Clase del driver de MySQL
+    hikari:
+      maximum-pool-size: 10  # Tamaño máximo del pool de conexiones
   jpa:
     hibernate:
       ddl-auto: update
