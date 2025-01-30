@@ -9,7 +9,7 @@ spring:
   application:
     name: api-rest-mysql  # Nombre del servicio para desarrollo
   datasource:
-    url: jdbc:mysql://localhost:3307/MicroMysql-deb  # Base de datos de desarrollo (MySQL)
+    url: jdbc:mysql://localhost:3307/MicroMysql  # Base de datos de desarrollo (MySQL)
     username: root
     password: universo903
   jpa:
