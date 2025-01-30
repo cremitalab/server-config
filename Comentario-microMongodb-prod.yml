@@ -3,13 +3,15 @@ Comentario:
   property: Comentario Profile Prod  # Propiedad personalizada para el perfil prod
 
 # Puerto para el entorno de producción
+server:
+  port: 0  # Asigna un puerto dinámico
 
 spring:
   application:
     name: api-rest-mongo  # Nombre del servicio para producción
   data:
     mongodb:
-      uri: mongodb://prod-mongo-host:27017/prod_db  # Base de datos de producción en un servidor MongoDB remoto
+      uri: mongodb://prod-mongo-host:27017/tienda_db  # Base de datos de producción en un servidor MongoDB remoto
 
 eureka:
   client:

@@ -1,6 +1,8 @@
 Comentario:
   property: Comentario Profile Dev  # Propiedad personalizada para el perfil dev
   # O el puerto que prefieras para el entorno de desarrollo
+  server:
+    port: 0  # Asigna un puerto dinámico
 
 spring:
   application:
@@ -18,3 +20,9 @@ eureka:
     metadata-map:
       port: ${server.port}  # El puerto asignado dinámicamente
     instance-id: ${spring.application.name}:${server.port}:${random.value}  # ID de la instancia
+	
+	
+	
+	
+	
+
